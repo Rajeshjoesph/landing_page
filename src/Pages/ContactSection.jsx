@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // required for carousel styling
 // import { Carousel } from 'react-responsive-carousel';
-import image1 from '../assets/image1.jpg';
+
 import Carousel from './Carousel';
 
 const ContactSection = () => {
