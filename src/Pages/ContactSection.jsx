@@ -1,10 +1,12 @@
+
+
 import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // required for carousel styling
 // import { Carousel } from 'react-responsive-carousel';
 import image1 from '../assets/image1.jpg';
 import Carousel from './Carousel';
 
-const AboutUs = () => {
+const ContactSection = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -25,12 +27,13 @@ const AboutUs = () => {
     };
 
     return (
-        <div className=" shadow-md p-3 flex  w-full">
-            <div className='w-60'>
-                <h1>Contact</h1>
+        <div className="bg-[#94abbd] shadow-md p-3 flex w-full">
+            <div className='w-1/2'>
+                <h1>Our Clients</h1>
                 <h2>Grace Packagning</h2>
             </div>
-            <div className="w-40 p-8 bg-white shadow-md rounded-xl">
+            <div className=" w-1/2 flex justify-center items-center p-5">
+            <div className="w-1/2 p-8 bg-white  shadow-md rounded-xl">
                 <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
@@ -89,8 +92,9 @@ const AboutUs = () => {
                     </button>
                 </form>
             </div>
+            </div>
         </div>
     );
 };
 
-export default AboutUs;
+export default ContactSection;
