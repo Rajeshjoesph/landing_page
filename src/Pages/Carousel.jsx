@@ -45,24 +45,24 @@ const Carousel = () => {
     }, 3000); // change slide every 3 seconds
 
     return () => clearInterval(interval); // clean up on unmount
-  }, [current]); // re-run interval when current changes
+  }, [current]); // re  -run interval when current changes
 
   return (
     <div className="shadow-md px-6 py-4 h-170 flex items-center">
-      <div className="mb-6 w-200 ">
-        <div className="relative w-full max-w-4xl overflow-hidden">
+      <div className="mb-6 w-200 h-auto">
+        <div className="relative w-full max-w-4xl h-auto overflow-hidden flex flex-col justify-between">
           <div
-            className="flex transition-discrete"
+            className="flex justify-evenly  h-130 transition-discrete"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {images.map((item, index) => (
               <div
                 key={index}
-                className="min-w-full flex flex-col items-center bg-transparent"
+                className="min-w-full flex flex-col h-auto items-left justify-evenly  bg-transparent"
               >
-                <h1 className="text-gray-700 translate-2">
+                <p className="text-gray-700 text-6xl translate-2">
                   {item.name}
-                </h1>
+                </p>
                 <p>{item.desc}</p>
               </div>
             ))}
@@ -71,9 +71,7 @@ const Carousel = () => {
       </div>
 
       <div className="flex flex-col items-center w-180">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
-          Featured Products
-        </h2>
+       
 
         <div className="relative w-full max-w-4xl overflow-hidden">
           <div
@@ -90,9 +88,7 @@ const Carousel = () => {
                   alt={item.name}
                   className="object-contain h-96 w-full"
                 />
-                <p className="mt-2 text-xl font-medium text-gray-700">
-                  {item.name}
-                </p>
+                
               </div>
             ))}
           </div>
