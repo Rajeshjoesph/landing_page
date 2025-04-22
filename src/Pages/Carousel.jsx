@@ -60,10 +60,13 @@ const Carousel = () => {
                 key={index}
                 className="min-w-full flex flex-col h-auto items-left justify-evenly  bg-transparent"
               >
-                <p className="text-gray-700 text-6xl translate-2">
+                <p
+                  className="text-[#b39164] text-6xl translate-2"
+                  style={{ textShadow: "1px 1px 2px black" }}
+                >
                   {item.name}
                 </p>
-                <p>{item.desc}</p>
+                <p className="text-xl "style={{ textShadow: "1px 1px 1px white" }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -71,8 +74,6 @@ const Carousel = () => {
       </div>
 
       <div className="flex flex-col items-center w-180">
-       
-
         <div className="relative w-full max-w-4xl overflow-hidden">
           <div
             className="flex transition-transform duration-500"
@@ -88,7 +89,6 @@ const Carousel = () => {
                   alt={item.name}
                   className="object-contain h-96 w-full"
                 />
-                
               </div>
             ))}
           </div>

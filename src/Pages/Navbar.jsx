@@ -2,8 +2,8 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      <div className="text-xl font-bold text-gray-800">
+    <nav className="bg-black shadow-md px-6 py-4 flex justify-between items-center">
+      <div className="text-4xl font-bold text-[#b39164]" style={{ textShadow: "1px  white" }}>
         Grace Packing
       </div>
       <ul className="hidden md:flex gap-6 text-gray-600 font-medium">
