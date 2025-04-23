@@ -8,7 +8,7 @@ const Navbar = () => {
         <img
           src={logoImg}
           alt="Logo"
-          className="w-22 h-22 inline-block mr-2 transform rotate-[10deg]"
+          className="w-22 h-22 inline-block mr-2 transform rotate-[5deg]"
         />
         <p> Grace Packing</p>
       </div>
