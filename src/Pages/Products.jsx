@@ -1,0 +1,116 @@
+import React from "react";
+
+const metals = [
+  { name: "Copper", image: "/path-to-copper.jpg" },
+  { name: "Steel", image: "/path-to-steel.jpg" },
+  { name: "Aluminum", image: "/path-to-aluminum.jpg" },
+  { name: "Brass", image: "/path-to-brass.jpg" },
+  { name: "Lead", image: "/path-to-lead.jpg" },
+];
+
+const products = [
+  { name: "Mini Bars", price: 40, status: "new", image: "/path-to-minibars.jpg" },
+  { name: "Round Pipe", price: 40, status: "new", image: "/path-to-roundpipe.jpg" },
+  { name: "Round Bar ALU", price: 80, status: "new", image: "/path-to-roundbaralu.jpg" },
+  { name: "Copper Bars", price: 150, status: "new", image: "/path-to-copperbars.jpg" },
+  { name: "TIPS Aluminum 3MM", price: 80, status: "sold", image: "/path-to-tipsaluminum.jpg" },
+  { name: "Aluminum Coil", price: 115, status: "new", image: "/path-to-aluminumcoil.jpg" },
+];
+
+const Product=() =>{
+  return (
+    <div className="bg-white px-8 py-16 space-y-20">
+
+      {/* Metal Alloys Section */}
+      <section>
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <button className="text-orange-500 font-semibold tracking-wide uppercase text-sm mb-2">
+              View All
+            </button>
+            <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+              Broad Range of <br /> Metal Alloys
+            </h2>
+          </div>
+          <button className="flex items-center gap-2 border border-gray-300 rounded-md px-4 py-2 hover:bg-gray-100">
+            <span className="font-semibold">Shop now</span>
+            <span className="text-orange-500 text-2xl">&#8594;</span>
+          </button>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          {metals.map((metal, idx) => (
+            <div key={idx} className="flex flex-col items-center">
+              <div className="w-32 h-32 bg-gray-100 overflow-hidden rounded-md">
+                <img src={metal.image} alt={metal.name} className="w-full h-full object-cover" />
+              </div>
+              <p className="mt-4 text-sm font-bold text-gray-800 uppercase">
+                {metal.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Top Selling Products Section */}
+      <section>
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <button className="text-orange-500 font-semibold tracking-wide uppercase text-sm mb-2">
+              View All
+            </button>
+            <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+              Top Selling <br /> Products
+            </h2>
+          </div>
+          <button className="flex items-center gap-2 border border-gray-300 rounded-md px-4 py-2 hover:bg-gray-100">
+            <span className="font-semibold">Shop now</span>
+            <span className="text-orange-500 text-2xl">&#8594;</span>
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {products.map((product, idx) => (
+            <div key={idx} className="relative bg-gray-50 p-6 rounded-md">
+              {product.status === "new" && (
+                <span className="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  NEW
+                </span>
+              )}
+              {product.status === "sold" && (
+                <span className="absolute top-2 right-2 bg-black text-white text-xs font-bold px-2 py-1 rounded">
+                  SOLD
+                </span>
+              )}
+              <img src={product.image} alt={product.name} className="h-32 mx-auto mb-4" />
+              <div className="text-center">
+                <p className="text-orange-500 font-bold text-lg mb-1">
+                  ${product.price.toFixed(2)}
+                </p>
+                <h4 className="text-sm font-semibold text-gray-800 uppercase">
+                  {product.name}
+                </h4>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Information Banner */}
+      <section className="relative bg-white border overflow-hidden rounded-md">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="flex flex-col justify-center p-8">
+            <p className="text-sm font-bold text-gray-800">FOR ALL INFORMATION YOU NEED</p>
+            <p className="text-orange-500 font-bold text-xl mt-2">CALL US: +367868787</p>
+          </div>
+          <div>
+            <img src="/path-to-banner-image.jpg" alt="Info Banner" className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
+
+export default Product;

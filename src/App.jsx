@@ -7,6 +7,7 @@ import HeroPage from "./Pages/HeroPage";
 import AboutUs from "./Pages/Aboutus";
 import ContactSection from "./Pages/ContactSection";
 import Footer from "./Pages/FooterPage.jsx";
+import Product from "./Pages/Products.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,8 +16,8 @@ function App() {
     <div>
       <Navbar />
       <HeroPage />
+      <Product/>
       <ContactSection />
-
       <AboutUs />
       <Footer/>
       {/* <div className="p-6">

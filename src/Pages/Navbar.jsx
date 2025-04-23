@@ -1,10 +1,16 @@
 import React from 'react'
+import logoImg from "../assets/Logo_img.png";
 
 const Navbar = () => {
   return (
-    <nav className="bg-black shadow-md px-6 py-4 flex justify-between items-center">
-      <div className="text-4xl font-bold text-[#b39164]" style={{ textShadow: "1px  white" }}>
-        Grace Packing
+    <nav className="bg-white shadow-md h-22 px-6 py-4 flex justify-between items-center">
+      <div className="text-4xl font-bold text-[#b39164] flex items-center" style={{ textShadow: "1px white" }}>
+        <img
+          src={logoImg}
+          alt="Logo"
+          className="w-22 h-22 inline-block mr-2 transform rotate-[10deg]"
+        />
+        <p> Grace Packing</p>
       </div>
       <ul className="hidden md:flex gap-6 text-gray-600 font-medium">
         <li className="hover:text-blue-500 cursor-pointer">Home</li>

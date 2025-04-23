@@ -27,7 +27,7 @@ const ContactSection = () => {
     };
 
     return (
-        <div className="bg-[#94abbd] shadow-md p-3 flex w-full">
+        <div className="bg-white shadow-md p-3 flex w-full">
             <div className='w-1/2'>
                 <h1>Our Clients</h1>
                 <h2>Grace Packagning</h2>
