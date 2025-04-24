@@ -61,8 +61,8 @@ const Carousel = () => {
                 className="min-w-full flex flex-col h-auto items-left justify-evenly  bg-transparent"
               >
                 <p
-                  className="text-[#b39164] text-6xl translate-2"
-                  style={{ textShadow: "1px 1px 2px black" }}
+                  className="text-orange-500 font-bold leading-tight text-6xl translate-2"
+                  style={{ textShadow: "1px 1px 1px white" }}
                 >
                   {item.name}
                 </p>

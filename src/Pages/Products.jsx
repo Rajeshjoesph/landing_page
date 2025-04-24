@@ -1,15 +1,16 @@
 import React from "react";
+import board from "../Matrials/Box OverView.jpg"
 
 const metals = [
-  { name: "Copper", image: "/path-to-copper.jpg" },
-  { name: "Steel", image: "/path-to-steel.jpg" },
-  { name: "Aluminum", image: "/path-to-aluminum.jpg" },
-  { name: "Brass", image: "/path-to-brass.jpg" },
-  { name: "Lead", image: "/path-to-lead.jpg" },
+  { name: "Rust", image: "/path-to-lead.jpg",bgColor:"#B24403"},
+  { name: "Dark Gold", image: "/path-to-copper.jpg", bgColor:"##A97835" },
+  { name: "Aztec Gold", image: "/path-to-steel.jpg",bgColor:"#C08F4F" },
+  { name: "Anti-Flash White", image: "/path-to-brass.jpg",bgColor:"#EBF2F6" },
+  { name: "Aluminum", image: "/path-to-aluminum.jpg" ,bgColor:"#DCE2E2"},
 ];
 
 const products = [
-  { name: "Mini Bars", price: 40, status: "new", image: "/path-to-minibars.jpg" },
+  { name: "Mini Bars", price: 40, status: "new", image: board },
   { name: "Round Pipe", price: 40, status: "new", image: "/path-to-roundpipe.jpg" },
   { name: "Round Bar ALU", price: 80, status: "new", image: "/path-to-roundbaralu.jpg" },
   { name: "Copper Bars", price: 150, status: "new", image: "/path-to-copperbars.jpg" },
@@ -41,8 +42,8 @@ const Product=() =>{
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
           {metals.map((metal, idx) => (
             <div key={idx} className="flex flex-col items-center">
-              <div className="w-32 h-32 bg-gray-100 overflow-hidden rounded-md">
-                <img src={metal.image} alt={metal.name} className="w-full h-full object-cover" />
+            <div className="w-32 h-32 bg-gray-100 overflow-hidden "  style={{ backgroundColor: metal.bgColor }}>   {/* rounded-md */}
+                {/* <img src={metal.image} alt={metal.name} className="w-full h-full object-cover" /> */}
               </div>
               <p className="mt-4 text-sm font-bold text-gray-800 uppercase">
                 {metal.name}
