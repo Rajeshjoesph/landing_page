@@ -150,7 +150,7 @@ const GracePackaging = () => {
               Reliable Corrugated Packaging Solutions
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 drop-shadow-md">
-              Delivering strength and quality with every box since 1999
+              Delivering strength and quality with every box 
             </p>
             <a
               href="#contact"
@@ -161,7 +161,7 @@ const GracePackaging = () => {
             <div className="flex justify-center items-center mt-8 space-x-6 text-blue-200">
               <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Star className="w-5 h-5 text-amber-400 mr-1" />
-                <span>25+ Years Experience</span>
+                <span>15+ Years Experience</span>
               </div>
               <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-1" />
@@ -216,9 +216,9 @@ const GracePackaging = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-600 ">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Why Choose Grace Packaging
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -231,7 +231,7 @@ const GracePackaging = () => {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-blue-100 text-sm">{feature.desc}</p>
+                <p className="text-gray-500 text-sm">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -329,9 +329,11 @@ const GracePackaging = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
               <div className="space-y-2 text-sm text-gray-400">
-                <p>+91 93809 42056</p>
-                <p>gracepackaging1999@gmail.com</p>
-                <p>123 Industrial Area, City</p>
+                <p><strong>Call:</strong> +91 93809 42056</p>
+                <p><strong>Whatsapp:</strong> +91 93809 42056</p>
+
+                <p><strong>Email:</strong> gracepackaging1999@gmail.com</p>
+                <p><strong>Address:</strong> 81B B.v.colony 2nd street,<br/>Vyaserpadi chennai-600039</p>
               </div>
             </div>
           </div>
