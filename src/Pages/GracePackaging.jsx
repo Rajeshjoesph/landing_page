@@ -3,7 +3,7 @@ import {
   Package, Layers, Palette, Shield, Ruler, Leaf, Truck, DollarSign,
   Phone, MessageCircle, Mail, MapPin, Menu, X, Star, CheckCircle, Box,
 } from 'lucide-react';
-import logoEmblem from "../assets/Eco Leaf Packaging Emblem.png"
+import logoEmblem from "../assets/logo.png"
 // '../assets/Logo_emblem.png';
 
 // Brand colours sampled from the logo
