@@ -14,25 +14,58 @@ const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
+ const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    const res = await fetch("https://formspree.io/f/{your_form_id}", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-      },
-      body: new FormData(e.target),
-    });
+        setLoading(true);
+        setStatus("Sending...");
 
-    if (res.ok) {
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setStatus("Message sent successfully!");
-    } else {
-      setStatus("Failed to send message. Please try again.");
-    }
-  };
+        try {
+
+            console.log("Submitting contact form:", formData);
+
+            const res = await fetch(
+                "http://localhost:5000/api/contact",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                    },
+
+                    body: JSON.stringify(formData),
+                }
+            );
+
+            const result = await res.json();
+
+            if (!res.ok) {
+                throw new Error(result.message || "Failed to submit enquiry");
+            }
+
+            console.log("API Response:", result);
+
+            setStatus("Message sent successfully!");
+
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                subject: "",
+                message: "",
+            });
+
+        } catch (error) {
+
+            console.error("Contact API Error:", error);
+
+            setStatus(error.message || "Something went wrong!");
+
+        } finally {
+            setLoading(false);
+        }
+    };
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-white text-black">
